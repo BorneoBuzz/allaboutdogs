@@ -1,3 +1,103 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+html, body {
+	max-height: 100%;
+	max-width: 100%;
+	width:100%;
+	height: 100%;
+}
+
+/* Nav Bar */
+
+.my-navbar {
+	border-radius: 0;
+	border: 0;
+	background-color: #d1d1e0;
+	margin-bottom: 2px;
+}
+
+
+.my-navbar .navbar-brandfont {
+	font-family: 'Pacifico', cursive;
+	font-size: 2em;
+	color: red;
+}
+
+
+#bs-example-navbar-collapse-1 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > .active > a {
+	color: black;
+	font-size: 1em;
+	font: 16px 'Raleway', sans-serif;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a:hover {
+	color: white;
+	background-color: rgba(193, 66, 66, 0.3);
+} 
+
+.navbar-default {
+    border-radius: 0;
+}
+
+/* header image */
+
+.image-header { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+.header-text {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 100%;
+	font: 7em 'Special Elite', cursive;
+	color: white;
+	text-shadow: 1px 1px black;
+}
+
+/* Main category */
+
+.maincat-title >h2 {
+	margin-top: 120px;
+	margin-bottom: 60px;
+	font-family: "Raleway", sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.site-footer, .page-wrap:after {
+  height: 50px; 
+}
+
+.site-footer {
+  background-color: #d1d1e0;
+}
+
+
+
