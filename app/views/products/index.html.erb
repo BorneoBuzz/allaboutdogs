@@ -5,30 +5,46 @@
 <table>
   <thead>
     <tr>
-      <th>Name
-      <tr>German Shepperd</tr>
-      </th>
-      
+      <th>Name</th>
       <th>Description</th>
-       <tr>Loyal, athlethic, active, intelligent </tr>
       <th>Image url</th>
-      <tr> <%= image_tag("puppy-yorkshire.jpeg", class: "img-responsive") %> </tr>
       <th colspan="3"></th>
     </tr>
   </thead>
+  <tfoot></tfoot>
   
   <p> I don't know what the heck am I doing </p>
 
   <tbody>
     <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
+    
+      <tr :class => "crazy">
+      <h2 :class => "loco"><%= product.name %></h2>
         <td><%= product.description %></td>
         <td><%= product.image_url %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      
+      <tr>
+        <h2> German Sheperd <td><%= product.name %></td> </h2>
+        <td><%= product.description %></td>
+        <td><%= image_tag("Corgi.jpeg", class: "img-responsive") %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%= image_tag("Bernese.jpeg", class: "img-responsive") %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      
     <% end %>
   </tbody>
 </table>
