@@ -8,11 +8,11 @@
       <th>Name</th>
       <th>Description</th>
       <th>Image url</th>
-      <th colspan="3"></th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
-  <p> I don't know what the heck am I doing </p>
+  <p> I Have No Idea What I'm Doing</p>
 
   <tbody>
     <% @products.each do |product| %>
@@ -27,6 +27,29 @@
       <% end %>
   </tbody>
 </table>
+
+  <div class="image-header">
+		<%= image_tag("huskysnow.jpeg", class: "img-responsive") %>
+		<h1 class="header-text">It's A Dog's <br> Life</h1>
+	</div><!-- end image-header -->
+
+	<div class="maincat-title">
+		<h2>Check Out the Types of Dogs</h2>
+	</div>
+
+	<div class="container">
+      <div class="row" id="maincategory">
+        <div class="col-md-4 col-xs-6"><%= image_tag("Bernese.jpg", class: "img-responsive") %> The Big Boys
+        </div><!-- colmd3 -->
+        
+        <div class="col-md-4 col-xs-6"><%= image_tag("Rottweiler.jpeg", class: "img-responsive") %> Medium's My Middle Name
+        </div><!-- colmd3 -->
+        
+        <div class="col-md-4 col-xs-6"><%= image_tag("Germansheperds.jpeg", class: "img-responsive") %> Small but Mighty
+        </div><!-- colmd3 -->
+      </div><!-- end maincategory -->
+      
+      <div></div>
 
 <br>
 
