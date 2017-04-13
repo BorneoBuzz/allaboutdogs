@@ -5,5 +5,9 @@
 .tableCenter {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+table, th, td, tr {
 	border: blue 1px solid;
+	text-align: center;
 }
