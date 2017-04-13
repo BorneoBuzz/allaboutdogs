@@ -2,7 +2,7 @@
 
 <h1>The Big Boys</h1>
 
-<table>
+<table class="tableCenter">
   <thead>
     <tr>
       <th>Name</th>
@@ -12,12 +12,10 @@
     </tr>
   </thead>
 
-  <p> I Have No Idea What the Ruby codes are for and how it affects / relates to the product listing on the product page</p>
-
   <tbody>
     <% @products.each do |product| %>
-      <tr :class => "crazy">
-      <h2 :class => "loco"><%= product.name %></h2>
+      <tr>
+        <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.image_url %></td>
         <td><%= link_to 'Show', product %></td>
@@ -28,23 +26,7 @@
   </tbody>
 </table>
 
-	<div class="maincat-title-big">
-		<h2>Big Sized Dogs</h2>
-	</div>
-
-	<div class="container">
-      <div class="row" id="maincategory">
-        <div class="col-md-4 col-xs-6"><%= image_tag("Bernese.jpg", class: "img-responsive") %> Bernese Mountain Dog
-        </div><!-- colmd3 -->
-        
-        <div class="col-md-4 col-xs-6"><%= image_tag("Rottweiler.jpeg", class: "img-responsive") %> Rottweiler
-        </div><!-- colmd3 -->
-        
-        <div class="col-md-4 col-xs-6"><%= image_tag("Germansheperds.jpeg", class: "img-responsive") %> German Sheperd
-        </div><!-- colmd3 -->
-      </div><!-- end maincategory -->
-      
-      <div></div>
+	
 
 <br>
 
