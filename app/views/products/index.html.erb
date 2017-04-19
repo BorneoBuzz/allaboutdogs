@@ -1,5 +1,22 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container-fluid">
+  <div class= "row">
+    <% @products.each do |product| %>
+    <div class ="col-sm-3 col-md-4">
+      <a href="#"><h1><%= product.name %></h1></a>
+      <p><%= product.description %></p>
+      <p><%= product.color %></p>
+      <p><%= image_tag(product.image_url, class: "img-responsive")</p>
+    </div>
+</div>
+
+
+
+
+
+
+
 <div>
   <table class="tableCenter">
     <thead>
@@ -18,6 +35,7 @@
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.image_url %></td>
+        <td><%= product.color %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
