@@ -2,15 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.tableCenter {
-	position: relative;
-	top: 10%;
-	margin-left: auto;
-	margin-right: auto;
+html, body {
+	max-height: 100%;
+	max-width: 100%;
+	width:100%;
+	height: 100%;
 }
 
-table, th, td, tr {
-	border: 3px solid #73AD21;
-	text-align: center;
-	padding: 15px;
+#topspace {
+	top: 20%;
 }
