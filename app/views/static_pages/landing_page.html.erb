@@ -5,14 +5,14 @@
 <div id="carousel-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <% @products.each do |product, index| %>
+    <% @products.each_with_index do |product, index| %>
     <li data-target = #carousel-generic" data-slide-to="#{index}" class="#{'active' if index == 0}" %>
     <% end %>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <% @products.each_with_index do |product| %>
+    <% @products.each do |product| %>
     <div class="item <%= "active" if product == @products.first %>">
       <%= image_tag(product.image_url) %>
       <div class="carousel-caption">
