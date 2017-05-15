@@ -12,7 +12,7 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <% @products.each_with_index do |product, index| %>
+    <% @products.each_with_index do |product| %>
     <div class="item <%= "active" if product == @products.first %>">
       <%= image_tag(product.image_url) %>
       <div class="carousel-caption">
