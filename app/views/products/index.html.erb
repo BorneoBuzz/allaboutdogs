@@ -4,7 +4,6 @@
   <div class="row" id="topspace"></div> <!-- to create blank top space -->
   <div class= "row">
     <% @products.each do |product| %>
-    <%= render @product %>
     <div class ="col-sm-3 col-md-4">
       <p><%= image_tag(product.image_url, class: "img-responsive")%></p>
       <a href="#"><h2><%= product.name %></h2></a>
