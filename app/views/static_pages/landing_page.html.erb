@@ -5,10 +5,13 @@
 <div id="carousel-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <% @products.each_with_index do |product, i| %>
-    <li data-target = #carousel-generic" data-slide-to="#{i}" class="#{'active' if i == 0}" %>
+    <%= @products.each_with_index do |product, i| %>
+    <li data-target = #carousel-generic" data-slide-to=#{i} class="#{'active' if i == 0}" %></li>
     <% end %>
   </ol>
+    
+  
+  
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
