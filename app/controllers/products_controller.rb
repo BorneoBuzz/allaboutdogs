@@ -60,10 +60,6 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  def product_params
-    params.require(:product).permit(:name, :description, :image_url, :colour, :price) #adding a new data field column on this line doesn't seem make it visible on the page.
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
