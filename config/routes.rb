@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :products
   resources :products
   
-  get 'static_pages/about', to: 'static_pages#about'
+  get 'static_pages/about'
 
   get 'static_pages/contact'
 
