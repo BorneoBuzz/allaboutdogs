@@ -43,17 +43,12 @@
 	        <li><%= link_to 'Product', products_path %></li>
 	        <li><%= link_to 'About', static_pages_about_path %></li>
 	        <li><%= link_to 'Contact', static_pages_contact_path %></li>
-	        
-	        
-	        <!-- <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories<span class="caret"></span></a>
-	          <ul class="dropdown-menu">
-	            <li><a href="#">The Big Boys</a></li>
-	            <li><a href="#">Medium's My Middle Name</a></li>
-	            <li><a href="#">Small but Mighty</a></li>
-	          </ul>
-	        </li> -->
-	        
+	        <li>
+	        	<%= form_tag(products_path, method: 'get') do |form| %>
+	        		<%= text_field_tag(:q, "", type: "text", class: "form-control", placeholder: "search text") %>
+	        		<%= submit_tag("Search", class: "btn btn-default") %>
+	        	<% end %>
+	        </li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->

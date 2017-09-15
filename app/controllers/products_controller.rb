@@ -1,12 +1,24 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  
+  
+  def index
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.search(search_term)
+    else
+      @products = Product.all
+    end
+  end
+
+  
 
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
   end
-
+  
   # GET /products/1
   # GET /products/1.json
   def show
