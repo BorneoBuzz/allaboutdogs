@@ -21,6 +21,7 @@ module Workspace
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    #config.active_record.raise_in_transactional_callbacks = true -- not valid for Rails 5.1. 
+    # line 24 Commented out - https://stackoverflow.com/questions/28006358/undefined-method-raise-in-transactional-callbacks-for-activerecordbaseclass 
   end
 end
