@@ -44,7 +44,7 @@
 	        <li><%= link_to 'About', static_pages_about_path %></li>
 	        <li><%= link_to 'Contact', static_pages_contact_path %></li>
 	        <li>
-	        	<%= form_tag(products_path, method: 'get') do |form| %>
+	        	<%= form_with(products_path, method: 'get', local: true) do |form| %>
 	        		<%= text_field_tag(:q, "", type: "text", class: "form-control", placeholder: "search text") %>
 	        		<%= submit_tag("Search", class: "btn btn-default") %>
 	        	<% end %>
