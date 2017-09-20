@@ -72,6 +72,8 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -83,4 +85,5 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :colour, :price) #but adding field on this line makes data visible on the product page.
     end
+  
 end
