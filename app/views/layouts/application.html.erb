@@ -43,14 +43,17 @@
 	        <li><%= link_to 'Product', products_path %></li>
 	        <li><%= link_to 'About', static_pages_about_path %></li>
 	        <li><%= link_to 'Contact', static_pages_contact_path %></li>
-	        <li>
-	        	<%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+	      </ul>
+	      
+	      <div class="pull-right">
+	      	<form class="navbar-form" role="search">
+	      		<%= form_with(url: products_path, method: 'get', local: true) do |form| %>
   					<%= form.label :q, 'Search for:' %>
   					<%= form.text_field :q, id: 'q', value: params[:q] %>
   					<%= form.submit 'Search' %>
-						<% end %>
-	        </li>
-	      </ul>
+						<% end %>	
+					</form>
+	      </div>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
