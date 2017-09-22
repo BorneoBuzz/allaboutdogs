@@ -46,13 +46,13 @@
 	      </ul>
 	      
 	      <div class="pull-right">
-	      	<form class="navbar-form" role="search">
+	      	<div class="navbar-form" role="search">
 	      		<%= form_with(url: products_path, method: 'get', local: true) do |form| %>
   					<%= form.label :q, 'Search for:' %>
   					<%= form.text_field :q, id: 'q', value: params[:q] %>
   					<%= form.submit 'Search' %>
 						<% end %>	
-					</form>
+					</div>
 	      </div>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
