@@ -11,8 +11,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  
-
   # GET /products
   # GET /products.json
   def index

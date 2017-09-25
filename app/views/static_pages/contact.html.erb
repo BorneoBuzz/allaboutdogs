@@ -1,30 +1,28 @@
 
 <p><%= image_tag("contactdogpet", class: "img-responsive fullimg")%></p>
 
-<!-- <div class = "formcontainer"> -->
-<div class= "row">
-    <div class="col-sm-6">
-        <h2 style="margin-right: 15%;"> Come Visit us </h2>
-        <p class="pushleft"> 2345 Dog Lover Lane, Woofland, FL 33322, USA</p>
-        <p class="pushleft">Phone: 888-888-1234</p>
-    </div>
-        
-    <div class="col-sm-6">
-        <form id="contact">
-            <div class="head">
-                <h2>Say Hello!</h2>
+<h1>Contact Us</h1>
+
+<%= flash[:notice] %>
+
+<%= form_with(url: "/static_pages/thank_you") do |form| %>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <%= form.label :name %>
+                <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
             </div>
             
-            <input type="text" name="name" placeholder="Name" /><br />
-            <input  type="email" name="email" placeholder="Email" /><br />
-            <textarea type="text" name="message" placeholder="Message"></textarea><br />
-            <div class="message">Message Sent</div>
-            <button id="submit" type="submit"> Send!</button>
-        </form>
+            <div class="form-group">
+                <%= form.label :email, "Email Address" %>
+                <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+            </div>
             
+            <div class="form-group">
+                <%= form.label :message %>
+                <%= form.text_area :message, class: "form-control", placeholder: "Enter Message" %>
+            </div>
+        </div>
     </div>
-</div>
-    
-    
-<!-- </div> -->
-
+    <%= form.submit "Send" %>
+<% end %>
