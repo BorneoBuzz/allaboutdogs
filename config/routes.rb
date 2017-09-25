@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :products
- 
- post 'static_pages/thank_you'
+  
+  post 'static_pages/thank_you'
 
   get 'static_pages/about'
 
