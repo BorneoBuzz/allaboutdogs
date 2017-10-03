@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -16,20 +15,19 @@ ActiveRecord::Schema.define(version: 20170502205043) do
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.integer "product_id"
-    t.float   "total"
+    t.float "total"
+    t.index ["product_id"], name: "index_orders_on_product_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
-  add_index "orders", ["product_id"], name: "index_orders_on_product_id"
-  add_index "orders", ["user_id"], name: "index_orders_on_user_id"
-
   create_table "products", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "image_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "colour"
-    t.integer  "price"
+    t.string "name"
+    t.text "description"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "colour"
+    t.integer "price"
   end
 
 end
