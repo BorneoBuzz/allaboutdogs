@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   
+  #For dynamic links to generate the right URLs. As I'm on c9, I'm replacing c9's equivalent of localhost
+  config.action_mailer.default_url_options = {host: 'https://allaboutdogs-borneobuzz.c9users.io/'}
+  
   # Fixing localhost connection refused error in development
   config.action_mailer.delivery_method = :smtp
   

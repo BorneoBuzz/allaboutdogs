@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+@import "bootstrap";
+
+/* Custom Styles */
+
+.register-new-edit .card-block {
+    background-color: #669999;
+    text-align: left;
+    width: 60%;
+    margin: auto;
+    padding: 5px 10px 10px 10px;
+}
+
+.card-block>h2 {
+    margin-top: 10px;
+}
+
+.register-text {
+    text-align: right;
+}
+
+.auth-links {
+    color: red;
+}
+
+.login-pwd .card{
+    background-color: #669999;
+    width: 30rem;
+    margin: 0 auto;
+    padding: 5px 10px 8px 10px;
+}
