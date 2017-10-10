@@ -10,6 +10,8 @@ Bundler.require(*Rails.groups)
 module Workspace
   class Application < Rails::Application
     
+    config.autoload_paths += %W(#{config.root}/lib)
+    
     #This enabled thank you response page to appear and function
     config.action_mailer.preview_path = "#{Rails.root}/lib/mailer_previews"
     
