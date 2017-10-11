@@ -65,15 +65,24 @@
 	</nav>
 	<!-- end of Navigation -->
 	
-	<p class="alert"><%= alert %></p>
-
-<%= yield %>
-
-<div class ="container-fluid">
-	<footer class="site-footer">
-  	&copy; 2017 Woof! Gallery
-	</footer>
-</div>
-
-</body>
-</html>
+	<% if notice %>
+    <div id="notice-wrapper" class="alert alert-info"> 
+     <p> <%= notice %> </p>
+    </div>
+  <% elsif alert %>
+		<div id="notice-wrapper" class="alert alert-danger" role="alert">
+			<p> <%= alert %> </p> 
+		</div>
+	<% end %>
+	
+	
+	<%= yield %>
+	
+	<div class ="container-fluid">
+		<footer class="site-footer">
+	  	&copy; 2017 Woof! Gallery
+		</footer>
+	</div>
+	
+	</body>
+	</html>

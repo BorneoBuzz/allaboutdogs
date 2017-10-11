@@ -125,7 +125,20 @@ html, body {
 }
 
 
-/*Contact*/
+/* Alert and notification*/
 
+#notice-wrapper {
+    width: 100%;
+    
+}
+
+.alert, .notice {
+    padding: 1.75rem 0;
+    text-align: center;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 
 
