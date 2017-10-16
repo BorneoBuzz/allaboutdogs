@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
     has_many :orders
+    has_many :comments
     
     def self.search(search_term)
         if Rails.env.production?
@@ -8,6 +9,11 @@ class Product < ActiveRecord::Base
             Product.where("name LIKE ?", "%#{search_term}%")
         end
     end
+    
+    def highest_rating_comment 
+        comments.rating_desc.first
+    end
+    
 end
 
 
