@@ -1,8 +1,9 @@
 <article>
   <div>
     <p id="notice"><%= notice %></p>
+    <div class="row"> <br></div>
     <div class="row">
-      <div class="col-sm-8 col-md-">
+      <div class="col-sm-6 col-md-6 col-md-offset-1">
         <p>
           <%= image_tag(@product.image_url, class: "img-responsive") %>
         </p>
@@ -35,22 +36,20 @@
         
         <p>
           <strong> Rating:</strong>
-          <%= @product.highest_rating_comment %>
+          <% if @product.highest_rating_comment %>
+            <p><%= @product.highest_rating_comment.body %></p>
+          <% end %>
         </p>
-        
       </div>
     </div>
     
+    <div class= "container">
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Back', products_path %>
+    </div>
     
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', products_path %>
   </div>
-  
-  
-  
-  
-  
-  
+
   
 </article>
 
